@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Atom Packages Directory</title>
+    <link rel="stylesheet" href="/assets/application.css">
+    <link rel="stylesheet" href="/assets/admin.css">
+    <link rel="icon" href="/assets/favicon.png">
+
+  </head>
+  <body>
+    <header>
+      <h1><a href="/"><span class="octicon octicon-package"></span>Atom Packages Directory</a></h1>
+      <span class="subheader">a package directory for a <a href="http://atom.io">text editor of the 21st Century</a></span>
+    </header>
+    <section id="content">
+      <h1>
+  Elmjutsu
+  <a href="https://github.com/halohalospecial/atom-elmjutsu">
+    <span class="octicon octicon-mark-github"></span>
+  </a>
+  
+</h1>
+<div class="package-install">
+  <strong>Install with:</strong>
+  <pre>
+    apm install elmjutsu
+  </pre>
+</div>
+<h1 id="elmjutsu">Elmjutsu</h1>
+
+<p>A bag of tricks for developing with <a href="http://elm-lang.org">Elm</a>.</p>
+
+<p>https://atom.io/packages/elmjutsu</p>
+
+<h2 id="feature-overview">Feature Overview</h2>
+
+<ul>
+  <li>
+    <p><a href="#autocomplete">Autocomplete</a></p>
+  </li>
+  <li>
+    <p><a href="#elmjutsu-go-to-definition">Go To Definition</a></p>
+  </li>
+  <li>
+    <p><a href="#elmjutsu-go-to-symbol">Go To Symbol</a></p>
+  </li>
+  <li>
+    <p><a href="#elmjutsu-find-usages">Find Usages</a></p>
+  </li>
+  <li>
+    <p><a href="#elmjutsu-go-to-next-usage">Go To Next Usage</a></p>
+  </li>
+  <li>
+    <p><a href="#elmjutsu-go-to-previous-usage">Go To Previous Usage</a></p>
+  </li>
+  <li>
+    <p><a href="#elmjutsu-go-back">Go Back</a></p>
+  </li>
+  <li>
+    <p><a href="#elmjutsu-rename-symbol">Rename Symbol</a></p>
+  </li>
+  <li>
+    <p><a href="#elmjutsu-toggle-sidekick">Toggle Sidekick</a></p>
+    <ul>
+      <li>Show type hints and documentation for the symbol at cursor position.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="requirements">Requirements</h2>
+
+<ul>
+  <li><a href="http://elm-lang.org/install">Elm</a></li>
+  <li><a href="https://atom.io/packages/language-elm">language-elm</a></li>
+  <li>For <code>Go To Definition</code>:
+    <ul>
+      <li><a href="https://atom.io/packages/hyperclick">hyperclick</a> (optional)</li>
+    </ul>
+  </li>
+  <li>For <code>Autocomplete</code>:
+    <ul>
+      <li><a href="https://atom.io/packages/autocomplete-plus">autocomplete-plus</a> (installed by default)</li>
+      <li><a href="https://atom.io/packages/snippets">snippets</a> (optional, installed by default)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="feature-details">Feature Details</h2>
+
+<h3 id="autocomplete">Autocomplete</h3>
+
+<p>Autocomplete is turned off by default.  To turn it on, check <code>Enable Autocomplete</code> in the package settings.</p>
+
+<p>This provides suggestions for imports, project symbols, and 3rd-party package symbols.</p>
+
+<ul>
+  <li>It’s recommended to uncheck <code>Enable autocomplete</code> of the <a href="https://atom.io/packages/language-elm">language-elm</a> package to prevent duplicate suggestions.</li>
+</ul>
+
+<p><img src="https://github.com/halohalospecial/atom-elmjutsu/blob/master/images/autocomplete.gif?raw=true" alt="autocomplete" /></p>
+
+<ul>
+  <li>You can also check <code>Enable Autocomplete Snippets</code> if you prefer.</li>
+</ul>
+
+<p><img src="https://github.com/halohalospecial/atom-elmjutsu/blob/master/images/autocomplete-snippet.gif?raw=true" alt="autocomplete-snippet" /></p>
+
+<h3 id="elmjutsu-go-to-definition"><code>Elmjutsu: Go To Definition</code></h3>
+
+<p><img src="https://github.com/halohalospecial/atom-elmjutsu/blob/master/images/go-to-definition.gif?raw=true" alt="go-to-definition" /></p>
+
+<p>If the <a href="https://atom.io/packages/hyperclick">hyperclick</a> package is installed, you can also check <code>Enable Hyperclick</code> to jump to definition using <code>Ctrl</code> + click / <code>Cmd</code> + click (Mac).</p>
+
+<h3 id="elmjutsu-go-to-symbol"><code>Elmjutsu: Go To Symbol</code></h3>
+
+<p><img src="https://github.com/halohalospecial/atom-elmjutsu/blob/master/images/go-to-symbol.gif?raw=true" alt="go-to-symbol" /></p>
+
+<h3 id="elmjutsu-find-usages"><code>Elmjutsu: Find Usages</code></h3>
+
+<p><img src="https://github.com/halohalospecial/atom-elmjutsu/blob/master/images/find-usages.gif?raw=true" alt="find-usages" /></p>
+
+<h3 id="elmjutsu-go-to-next-usage"><code>Elmjutsu: Go To Next Usage</code></h3>
+
+<p>Moves the cursor to the position of the next usage.</p>
+
+<h3 id="elmjutsu-go-to-previous-usage"><code>Elmjutsu: Go To Previous Usage</code></h3>
+
+<p>Moves the cursor to the position of the previous usage.</p>
+
+<h3 id="elmjutsu-go-back"><code>Elmjutsu: Go Back</code></h3>
+
+<p>The current cursor position is added to a navigation stack before jumping via:
+  * <code>Go To Definition</code>
+  * <code>Go To Symbol</code>
+  * <code>Go To Next Usage</code>
+  * <code>Go To Previous Usage</code></p>
+
+<p>Invoke this command to jump back to the previous position.</p>
+
+<h3 id="elmjutsu-rename-symbol"><code>Elmjutsu: Rename Symbol</code></h3>
+
+<p>Renames the symbol across the whole project.  Take note that this is <em>not</em> an undoable operation.</p>
+
+<ul>
+  <li>Press <kbd>enter</kbd> to rename or <kbd>escape</kbd> to cancel.</li>
+  <li>Uncheck usages to exclude.</li>
+  <li>Modified modules with open editors will <em>not</em> be saved automatically.</li>
+  <li>Renaming a module will <em>not</em> rename the associated file.</li>
+</ul>
+
+<p><img src="https://github.com/halohalospecial/atom-elmjutsu/blob/master/images/rename-symbol.gif?raw=true" alt="rename-symbol" /></p>
+
+<h3 id="elmjutsu-hide-usages-panel"><code>Elmjutsu: Hide Usages Panel</code></h3>
+
+<p>Closes the <code>Usages</code> panel (the panel is shown after invoking <code>Find Usages</code> or <code>Rename Symbol</code>).</p>
+
+<h3 id="elmjutsu-toggle-sidekick"><code>Elmjutsu: Toggle Sidekick</code></h3>
+<p>Shows the type hints and documentation for the symbol at cursor position.  The size and position of the panel can be modified in the package settings.</p>
+
+<ul>
+  <li>Example #1 (default): <code>Sidekick Position</code> = “bottom”, <code>Sidekick Size</code> = 0 (Automatically resizes to fit content.)</li>
+</ul>
+
+<p><img src="https://github.com/halohalospecial/atom-elmjutsu/blob/master/images/sidekick1.gif?raw=true" alt="sidekick1" /></p>
+
+<ul>
+  <li>Example #2: <code>Sidekick Position</code> = “bottom”, <code>Sidekick Size</code> = 30 (Just shows the type hints.)</li>
+</ul>
+
+<p><img src="https://github.com/halohalospecial/atom-elmjutsu/blob/master/images/sidekick2.gif?raw=true" alt="sidekick2" /></p>
+
+<ul>
+  <li>Example #3: <code>Sidekick Position</code> = “right”, <code>Sidekick Size</code> = 300</li>
+</ul>
+
+<p><img src="https://github.com/halohalospecial/atom-elmjutsu/blob/master/images/sidekick3.gif?raw=true" alt="sidekick3" /></p>
+
+<h2 id="keybindings">Keybindings</h2>
+
+<p>Here is an example:
+```
+‘atom-text-editor:not([mini])[data-grammar^=”source elm”]’:
+  ‘f12’: ‘elmjutsu:go-to-definition’
+  ‘ctrl-r’: ‘elmjutsu:go-to-symbol’
+  ‘shift-f12’: ‘elmjutsu:find-usages’
+  ‘f8’: ‘elmjutsu:go-to-next-usage’
+  ‘shift-f8’: ‘elmjutsu:go-to-previous-usage’
+  ‘ctrl-f12’: ‘elmjutsu:go-back’
+  ‘f2’: ‘elmjutsu:rename-symbol’</p>
+
+<p>‘atom-workspace’:
+  ‘f1’: ‘elmjutsu:toggle-sidekick’
+  ‘ctrl-shift-f12’: ‘elmjutsu:hide-usages-panel’
+```</p>
+
+<p>Add them to your <code>keymap.cson</code> or bind them from <code>Settings</code> &gt; <code>Keybindings</code>.</p>
+
+<h2 id="notes">Notes</h2>
+
+<ul>
+  <li>Be sure to check out the <a href="http://flight-manual.atom.io/using-atom/sections/atom-packages/#package-settings">settings</a> for this package to find out about the available options.</li>
+  <li>It’s highly recommended to read <code>CHANGELOG.md</code> before upgrading to a
+newer version to check for breaking changes.</li>
+  <li>The commands only work for top-level values for now.</li>
+  <li>You may encounter weird behaviors if multiple files are using the same module name in your project.</li>
+</ul>
+
+<h2 id="credits">Credits</h2>
+
+<ul>
+  <li>The initial code was based on the <a href="https://github.com/elm-lang/elm-lang.org">source</a> of <a href="http://elm-lang.org/try">Try Elm</a>.</li>
+  <li>The <a href="https://github.com/edubkendo/atom-elm">code</a> for computing snippet tab stops was from <a href="https://atom.io/packages/language-elm">language-elm</a>.</li>
+</ul>
+<section class="package-keywords">
+  <strong>Keywords:</strong> elm, ide <a href="https://github.com/halohalospecial/atom-elmjutsu/edit/master/package.json">Suggest keywords</a>
+</section>
+
+    </section>
+    <footer>
+      <p>
+        <span class="octicon octicon-code"></span> with <span class="octicon octicon-heart"></span> by <a href="http://bastilian.me">@bastilian</a><br />
+        <small>
+          2043 out of 5684 packages categorised.
+          | Last updated: 2016-09-29</small>
+      </p>
+      <p>
+
+      </p>
+    </footer>
+    <div style="opacity:.15;position:relative;z-index:-1;">
+      <div class="system"></div>
+      <div class="system-2"></div>
+    </div>
+    <a href="https://github.com/bastilian/atom-packages.directory">
+      <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+    </a>
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-75253038-3', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+      <script type="text/javascript">
+          window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":null,"theme":"light-floating"};
+      </script>
+
+      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
+
+    
+  </body>
+</html>

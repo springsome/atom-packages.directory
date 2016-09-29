@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Atom Packages Directory</title>
+    <link rel="stylesheet" href="/assets/application.css">
+    <link rel="stylesheet" href="/assets/admin.css">
+    <link rel="icon" href="/assets/favicon.png">
+
+  </head>
+  <body>
+    <header>
+      <h1><a href="/"><span class="octicon octicon-package"></span>Atom Packages Directory</a></h1>
+      <span class="subheader">a package directory for a <a href="http://atom.io">text editor of the 21st Century</a></span>
+    </header>
+    <section id="content">
+      <h1>
+  Project Viewer
+  <a href="https://github.com/jccguimaraes/atom-project-viewer">
+    <span class="octicon octicon-mark-github"></span>
+  </a>
+  
+</h1>
+<div class="package-install">
+  <strong>Install with:</strong>
+  <pre>
+    apm install project-viewer
+  </pre>
+</div>
+<h1 id="readme">README</h1>
+
+<p><a href="https://gitter.im/jccguimaraes/atom-project-viewer?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="http://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg?style=flat-square" alt="Join the chat at https://gitter.im/jccguimaraes/atom-project-viewer" /></a>
+<a href="#contributors"><img src="https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square" alt="All Contributors" /></a></p>
+
+<p><a href="https://atom.io/packages/project-viewer/"><img src="https://img.shields.io/badge/atom-1.10.0-orange.svg?style=flat-square" alt="atom version" /></a>
+<a href="https://atom.io/packages/project-viewer/"><img src="https://img.shields.io/apm/v/project-viewer.svg?style=flat-square" alt="apm version" /></a>
+<a href="https://atom.io/packages/project-viewer/"><img src="https://img.shields.io/apm/dm/project-viewer.svg?style=flat-square" alt="apm downloads" /></a></p>
+
+<p><a href="https://travis-ci.org/jccguimaraes/atom-project-viewer"><img src="https://travis-ci.org/jccguimaraes/atom-project-viewer.svg?branch=master" alt="Travis CI CI" /></a>
+<a href="https://ci.appveyor.com/project/jccguimaraes/atom-project-viewer"><img src="https://ci.appveyor.com/api/projects/status/2t91cemmpf635p2e?svg=true" alt="AppVeyor CI" /></a>
+<a href="https://circleci.com/gh/jccguimaraes/atom-project-viewer"><img src="https://circleci.com/gh/jccguimaraes/atom-project-viewer/tree/master.svg?style=shield&amp;circle-token=c2215983920e08d193a80b5775760792c5d2e883" alt="CircleCI CI" /></a></p>
+
+<p>This package was driven by other packages that manage projects but didn’t gave me what I really wanted for my day to basis setup, so I created this package.</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/14871650/15876484/8bfcbc5a-2d05-11e6-90c0-87a38020d78c.gif" alt="pv_cgp_01" /></p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/14871650/15876485/8c13a3b6-2d05-11e6-8f96-bb4ab8acfe9a.gif" alt="pv_cgp_02" /></p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/1093709/16894913/be34c22a-4b65-11e6-8f95-8b8b314f40d5.gif" alt="pv_cgp_03" /></p>
+
+<h3 id="projects-that-inspired-me">Projects that inspired me!</h3>
+<ul>
+  <li><a href="https://atom.io/packages/tree-view">tree-view</a> from <em>atom</em>.</li>
+  <li><a href="https://atom.io/packages/project-manager">project-manager</a> from <em>danielbrodin</em>.</li>
+  <li><a href="https://atom.io/packages/project-sidebar">project-sidebar</a> from <em>bripkens</em>.</li>
+</ul>
+
+<h3 id="installation">Installation</h3>
+<p>Simply run the following command:
+<code>sh
+apm install project-viewer
+</code>
+Or find the package in <strong>Atom → Settings → Install</strong> and search for <strong><em>project-viewer</em></strong>.</p>
+
+<h3 id="options">Options</h3>
+<ul>
+  <li><code>ctrl-alt-cmd-v</code> open a select view for fast project opening;</li>
+  <li><code>ctrl-alt-cmd-b</code> to toggle between sidebar visibility;</li>
+  <li><code>ctrl-alt-cmd-n</code> to toggle focus on sidebar;</li>
+</ul>
+
+<h3 id="settings">Settings</h3>
+<p>Settings | Type | Description | Default
+———|——|————-|——–
+<code>startupVisibility</code> | <code>Boolean</code> | Define if you want <strong>project-viewer</strong> to be visible on startup. | <code>false</code>
+<code>statusBarVisibility</code> | <code>Boolean</code> | Define if you want <strong>project-viewer</strong> to show active <em>group</em> and <em>project</em>. | <code>false</code>
+<code>autohide</code> | <code>Boolean</code> | Ability to autohide project viewer. | <code>false</code>
+<code>panelPosition</code> | <code>String</code> | You can set the place of the viewer, to the most right position or to the most left position. | <code>Right</code>
+<code>alwaysOpenInNewWindow</code> | <code>Boolean</code> | If set to true, always open projects in a new window (default Atom’s behavior), instead of opening in the same window. | <code>false</code>
+<code>hideHeader</code> | <code>Boolean</code> | Hide header (for more space). | <code>false</code>
+<code>githubAccessToken</code> | <code>String</code> | Your personal and private GitHub access token. This is useful if you want to save/backup your projects to a remote place (as a gist). <em>note</em>: keep in mind that this token should have only permissions to <code>rw</code> gists as well as that any package can access this token string. | <code>''</code>
+<code>gistId</code> | <code>String</code> | ID of the gist used as a backup storage. | <code>''</code>
+<code>setName</code> | <code>String</code> | Name of your working set, for example ‘work’ or ‘home’. As each working set is backed up into a separate file in one gist, you can have multiple Client/Group/Project sets on different machines and have them all safely backed up on gist. | <code>default</code>
+<code>convertOldData</code> | <code>Boolean</code> | If you came from a version previous to <code>0.3.0</code>, you most probably have the old data in the atom folder. By default it will always check on startup for this data and if the new does not exist, it will convert to the new data schema. | <code>true</code></p>
+
+<h2 id="features--future-features">Features &amp; Future Features</h2>
+<p>Please read the <code>CHANGE LOG</code> to have a more insight on all the features existing and planned.</p>
+
+<h2 id="contributors">Contributors</h2>
+<p>Thanks goes to these wonderful people (<a href="https://github.com/kentcdodds/all-contributors#emoji-key">emoji key</a>):</p>
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<p>| <a href="https://github.com/jccguimaraes"><img src="https://avatars.githubusercontent.com/u/14871650?v=3" width="100px;" /><br /><sub>João Guimarães</sub></a><br />💁 <a href="https://github.com/jccguimaraes/atom-project-viewer/issues?q=author%3Ajccguimaraes">🐛</a> <a href="https://github.com/jccguimaraes/atom-project-viewer/commits?author=jccguimaraes">💻</a> 🎨 <a href="https://github.com/jccguimaraes/atom-project-viewer/commits?author=jccguimaraes">📖</a> 👀 | <a href="https://github.com/Hammster"><img src="https://avatars.githubusercontent.com/u/1093709?v=3" width="100px;" /><br /><sub>Hans Koch</sub></a><br /><a href="https://github.com/jccguimaraes/atom-project-viewer/commits?author=Hammster">💻</a> | <a href="https://github.com/DamnedScholar"><img src="https://avatars.githubusercontent.com/u/4084322?v=3" width="100px;" /><br /><sub>Holland Wilson</sub></a><br /><a href="https://github.com/jccguimaraes/atom-project-viewer/commits?author=DamnedScholar">💻</a> | <a href="https://github.com/amilor"><img src="https://avatars.githubusercontent.com/u/7261682?v=3" width="100px;" /><br /><sub>Roman Huba</sub></a><br /><a href="https://github.com/jccguimaraes/atom-project-viewer/commits?author=amilor">💻</a> |
+| :—: | :—: | :—: | :—: |
+<!-- ALL-CONTRIBUTORS-LIST:END --></p>
+
+<p>This project follows the <a href="https://github.com/kentcdodds/all-contributors">all-contributors</a> specification. Contributions of any kind welcome!</p>
+
+<h3 id="other">Other</h3>
+<p>You can follow me on <a href="https://twitter.com/jccguimaraes">Twitter</a></p>
+<section class="package-keywords">
+  <strong>Keywords:</strong> project, manager, viewer <a href="https://github.com/jccguimaraes/atom-project-viewer/edit/master/package.json">Suggest keywords</a>
+</section>
+
+    </section>
+    <footer>
+      <p>
+        <span class="octicon octicon-code"></span> with <span class="octicon octicon-heart"></span> by <a href="http://bastilian.me">@bastilian</a><br />
+        <small>
+          2043 out of 5684 packages categorised.
+          | Last updated: 2016-09-29</small>
+      </p>
+      <p>
+
+      </p>
+    </footer>
+    <div style="opacity:.15;position:relative;z-index:-1;">
+      <div class="system"></div>
+      <div class="system-2"></div>
+    </div>
+    <a href="https://github.com/bastilian/atom-packages.directory">
+      <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+    </a>
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-75253038-3', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+      <script type="text/javascript">
+          window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":null,"theme":"light-floating"};
+      </script>
+
+      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
+
+    
+  </body>
+</html>
